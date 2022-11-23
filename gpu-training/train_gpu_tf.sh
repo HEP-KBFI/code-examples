@@ -6,9 +6,7 @@
 
 #see https://github.com/HEP-KBFI/singularity/blob/master/README.md
 #to read about how to install additional packages
-IMG=/home/software/singularity/base.simg
+IMG=/home/software/singularity/tf-2.10.0.simg
 
 cd ~/code-examples/gpu-training
-singularity exec -B /scratch-persistent --nv $IMG python3 train.py
-
-
+singularity exec -B /scratch-persistent --nv $IMG python3 train_tf.py
