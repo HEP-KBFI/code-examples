@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH -p gpu
-#SBATCH --gpus 1
+#SBATCH --gres gpu:rtx:1
 #SBATCH --mem-per-gpu=8G
 #SBATCH --no-requeue
 
@@ -9,6 +9,6 @@
 IMG=/home/software/singularity/pytorch.simg
 
 cd ~/code-examples/gpu-training
-singularity exec -B /scratch-persistent --nv $IMG python3 train_pytorch.py
+singularity exec -B /scratch/persistent --nv $IMG python3 train_pytorch.py
 
 
