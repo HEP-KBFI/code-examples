@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH -p gpu
-#SBATCH --gpus 4
+#SBATCH --gres gpu:rtx:4
 #SBATCH --mem-per-gpu=8G
 #SBATCH --no-requeue
 
