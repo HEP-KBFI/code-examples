@@ -84,7 +84,9 @@ for X, y in test_dataloader:
 # operations in the neural network, we move it to the GPU if available.
 
 # Get cpu or gpu device for training.
-device = "cuda" if torch.cuda.is_available() else "cpu"
+if not torch.cuda.is_available():
+    raise Exception("CUDA is not available")
+device = "cuda"
 print(f"Using {device} device")
 
 # Define model

@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -p short
+#SBATCH -p io
 #SBATCH --no-requeue
 
 IMG=/home/software/singularity/base.simg
