@@ -2,7 +2,7 @@
 
 # Send completion request to llama-server
 curl --request POST \
-    --url http://gpu2:8080/completion \
+    --url https://torn.hep.kbfi.ee:38080/v1/completions \
     --header "Content-Type: application/json" \
-    --data '{"prompt": "Building a website can be done in 10 simple steps:","n_predict": 128}'
+    --data '{"prompt": "Plan the steps for a Hadoop to CEPH migration in clear steps.","n_predict": 128}'
 
